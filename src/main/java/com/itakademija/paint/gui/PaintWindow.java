@@ -10,6 +10,7 @@ import java.awt.*;
 public class PaintWindow extends JFrame {
 
     private final PaintSettingsPanel paintSettingsPanel = new PaintSettingsPanel();
+    private final PaintPanel paintPanel = new PaintPanel();
 
     private PaintWindow(){
         setTitle("Paint 2D");
@@ -17,7 +18,7 @@ public class PaintWindow extends JFrame {
 
         //North
         add(paintSettingsPanel, BorderLayout.NORTH);
-        add(new PaintPanel(), BorderLayout.CENTER);
+        add(paintPanel, BorderLayout.CENTER);
 
         //Prozor ima 3 menija u meni baru
         JMenuBar menuBar = new JMenuBar();
@@ -40,6 +41,15 @@ public class PaintWindow extends JFrame {
         fileMenu.add(exitMenu);
 
         setJMenuBar(menuBar);
+    }
+
+
+    public boolean isBlueColorSelected(){
+        return paintSettingsPanel.isBlueSelected();
+    }
+
+    public boolean isRectangleShapeSelected(){
+        return paintSettingsPanel.isRectangleSelected();
     }
 
 
