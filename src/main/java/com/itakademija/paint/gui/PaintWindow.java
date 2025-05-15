@@ -1,11 +1,14 @@
 package com.itakademija.paint.gui;
 
 import com.itakademija.paint.gui.listener.ExitListener;
+import com.itakademija.paint.gui.listener.SaveListener;
 import com.itakademija.paint.gui.settings.PaintPanel;
 import com.itakademija.paint.gui.settings.PaintSettingsPanel;
+import com.itakademija.paint.shape.PaintShape;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class PaintWindow extends JFrame {
 
@@ -27,17 +30,18 @@ public class PaintWindow extends JFrame {
         fileMenu.setMnemonic('F');
         menuBar.add(fileMenu);
 
-        JMenuItem openMenuItem = new JMenuItem("Otvori");
-        openMenuItem.setMnemonic('O');
-        fileMenu.add(openMenuItem);
+        JMenuItem saveMenuItem = new JMenuItem("Save");
+        saveMenuItem.setMnemonic('S');
+        saveMenuItem.addActionListener(new SaveListener());
+        fileMenu.add(saveMenuItem);
 
-        JMenuItem editMenu = new JMenuItem("Otvori");
+        JMenuItem editMenu = new JMenuItem("Open");
         editMenu.setMnemonic('O');
         fileMenu.add(editMenu);
 
-        JMenuItem exitMenu = new JMenuItem("Izlaz");
+        JMenuItem exitMenu = new JMenuItem("Exit");
         exitMenu.addActionListener(new ExitListener());
-        exitMenu.setMnemonic('I');
+        exitMenu.setMnemonic('E');
         fileMenu.add(exitMenu);
 
         setJMenuBar(menuBar);
@@ -50,6 +54,14 @@ public class PaintWindow extends JFrame {
 
     public boolean isRectangleShapeSelected(){
         return paintSettingsPanel.isRectangleSelected();
+    }
+
+    public List<PaintShape> getPaintShapes(){
+        return paintPanel.getPaintShapes();
+    }
+
+    public void clearPaintPanel(){
+        paintPanel.clear();
     }
 
 

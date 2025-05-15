@@ -23,6 +23,10 @@ public class PaintPanel extends JPanel {
         addMouseMotionListener(new DrawListener());
     }
 
+    public List<PaintShape> getPaintShapes() {
+        return paintShapes;
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -32,6 +36,11 @@ public class PaintPanel extends JPanel {
             g2d.setColor(paintShape.getColor());//java.awt.Color
             g2d.fill(paintShape.createShape());//java.awt.Shape -> java.awt.Rectangle, java.awt.Ellipse
         }
+    }
+
+    public void clear() {
+        paintShapes.clear();
+        repaint();
     }
 
 
