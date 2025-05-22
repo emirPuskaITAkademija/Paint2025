@@ -1,9 +1,12 @@
 package com.itakademija.paint.gui;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+
 import javax.swing.*;
 
 public class PaintStarter {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedLookAndFeelException {
+//        UIManager.setLookAndFeel(new FlatDarkLaf());
         SwingUtilities.invokeLater(PaintStarter::createAndShowGUI);
     }
 

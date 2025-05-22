@@ -1,4 +1,4 @@
-package com.itakademija.paint.gui.settings;
+package com.itakademija.paint.gui.paint;
 
 import com.itakademija.paint.gui.PaintWindow;
 import com.itakademija.paint.shape.Ellipse;
@@ -16,11 +16,15 @@ public class PaintPanel extends JPanel {
 
     private final List<PaintShape> paintShapes = new ArrayList<>();
 
-
     public PaintPanel() {
         setBackground(Color.WHITE);
         addMouseListener(new DrawListener());
         addMouseMotionListener(new DrawListener());
+    }
+
+    public void addPaintShapes(List<PaintShape> paintShapes) {
+        this.paintShapes.addAll(paintShapes);
+        repaint();
     }
 
     public List<PaintShape> getPaintShapes() {
