@@ -10,8 +10,8 @@ import java.util.List;
 public class DomPictureWriter implements PictureWriter {
     @Override
     public void write(String picturePath, List<PaintShape> paintShapes) {
-        new DocumentCreator()
-                .afterThat(new DocumentTransferExecutor(picturePath))
+        new DocumentCreator()//
+                .afterThat(new DocumentTransferExecutor(picturePath))//
                 .process(paintShapes);
     }
 }

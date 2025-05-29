@@ -9,7 +9,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.awt.*;
 import java.util.List;
-import java.util.function.Function;
 
 public class DocumentCreator implements DocumentProcessor<List<PaintShape>, Document> {
     @Override
