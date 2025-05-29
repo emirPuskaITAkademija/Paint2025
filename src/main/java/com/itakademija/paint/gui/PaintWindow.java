@@ -33,6 +33,7 @@ public class PaintWindow extends JFrame {
     }
 
     public void onPictureOpen(List<PaintShape> paintShapes) {
+        paintPanel.clear();
         paintPanel.addPaintShapes(paintShapes);
     }
 
