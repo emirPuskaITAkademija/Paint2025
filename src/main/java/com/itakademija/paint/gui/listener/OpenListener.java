@@ -1,6 +1,5 @@
 package com.itakademija.paint.gui.listener;
 
-import com.itakademija.paint.gui.PaintWindow;
 import com.itakademija.paint.shape.PaintShape;
 import com.itakademija.paint.xml.PictureReader;
 

@@ -54,11 +54,11 @@ public class MenuBarCreator {
         return menuBar;
     }
 
-    private void createOpenMenuItem(String SAX, char O, PictureReaderFactory sax, JMenu openMenu) {
-        JMenuItem saxOpenMenuItem = new JMenuItem(SAX);
-        saxOpenMenuItem.setMnemonic(O);
-        saxOpenMenuItem.addActionListener(new OpenListener(sax.get(), onPictureOpen));
-        openMenu.add(saxOpenMenuItem);
+    private void createOpenMenuItem(String label, char O, PictureReaderFactory sax, JMenu openMenu) {
+        JMenuItem openMenuItem = new JMenuItem(label);
+        openMenuItem.setMnemonic(O);
+        openMenuItem.addActionListener(new OpenListener(sax.get(), onPictureOpen));
+        openMenu.add(openMenuItem);
     }
 
     private void createSaveMenuItem(String SAX, char S, PictureWriterFactory sax, List<PaintShape> paintShapes, JMenu saveWithMenu) {
