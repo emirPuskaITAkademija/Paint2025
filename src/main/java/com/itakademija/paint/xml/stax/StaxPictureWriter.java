@@ -7,7 +7,6 @@ import com.itakademija.paint.xml.PictureWriter;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamWriter;
 import java.awt.*;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.util.List;
 

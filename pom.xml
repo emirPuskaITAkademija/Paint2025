@@ -19,5 +19,50 @@
            <artifactId>flatlaf</artifactId>
            <version>2.0</version>
        </dependency>
+       <dependency>
+           <groupId>jakarta.xml.bind</groupId>
+           <artifactId>jakarta.xml.bind-api</artifactId>
+           <version>4.0.0</version>
+       </dependency>
+       <dependency>
+           <groupId>jakarta.xml.bind</groupId>
+           <artifactId>jakarta.xml.bind-api</artifactId>
+           <version>3.0.1</version>
+       </dependency>
+       <dependency>
+           <groupId>org.glassfish.jaxb</groupId>
+           <artifactId>jaxb-runtime</artifactId>
+           <version>4.0.3</version>
+       </dependency>
+       <dependency>
+           <groupId>org.glassfish.jaxb</groupId>
+           <artifactId>jaxb-core</artifactId>
+           <version>4.0.3</version>
+       </dependency>
    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.5.0</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sources>
+                        <source>${project.basedir}/picture.xsd</source>
+                    </sources>
+                    <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                    <clearOutputDir>false</clearOutputDir>
+                    <packageName>com.itakademija.paint.xml.jaxb.model</packageName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -28,7 +28,7 @@ public class PaintWindow extends JFrame {
 
 
     private void onPictureSave(String pictureName) {
-        JOptionPane.showMessageDialog(null, "Slika '%s' je sačuvana".formatted(pictureName));
+        JOptionPane.showMessageDialog(null, String.format("Slika '%s' je sačuvana",pictureName));
         paintPanel.clear();
     }
 

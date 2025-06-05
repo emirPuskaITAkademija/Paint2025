@@ -37,6 +37,7 @@ public class MenuBarCreator {
         createSaveMenuItem("SAX", 'S', PictureWriterFactory.SAX, paintShapes, saveWithMenu);
         createSaveMenuItem("DOM", 'D', PictureWriterFactory.DOM, paintShapes, saveWithMenu);
         createSaveMenuItem("StAX", 'T', PictureWriterFactory.STAX, paintShapes, saveWithMenu);
+        createSaveMenuItem("JAXB", 'T', PictureWriterFactory.JAXB, paintShapes, saveWithMenu);
 
         fileMenu.add(saveWithMenu);
 
@@ -44,6 +45,8 @@ public class MenuBarCreator {
         createOpenMenuItem("SAX", 'O', PictureReaderFactory.SAX, openWithMenu);
         createOpenMenuItem("DOM", 'M', PictureReaderFactory.DOM, openWithMenu);
         createOpenMenuItem("StAX", 'T', PictureReaderFactory.STAX, openWithMenu);
+        createOpenMenuItem("JAXB", 'T', PictureReaderFactory.JAXB, openWithMenu);
+
 
         fileMenu.add(openWithMenu);
 

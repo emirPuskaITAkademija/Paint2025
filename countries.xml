@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Countries>
+    <Country>
+        <Country_Name>BiH</Country_Name>
+        <Country_Capital>Sarajevo</Country_Capital>
+        <Country_Foundation_Date>1189</Country_Foundation_Date>
+        <Country_Continent>Europa</Country_Continent>
+        <Country_Population>3500000</Country_Population>
+    </Country>
+    <Country>
+        <Country_Name>Srbija</Country_Name>
+        <Country_Capital>Beograd</Country_Capital>
+        <Country_Foundation_Date>1200</Country_Foundation_Date>
+        <Country_Continent>Europa</Country_Continent>
+        <Country_Population>5500000</Country_Population>
+    </Country>
+</Countries>
